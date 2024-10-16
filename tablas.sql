@@ -11,9 +11,9 @@ primary key(id_estudiantes)
 
 create table inscripcion(
 id_inscripcion INT NOT NULL AUTO_INCREMENT,
-id_estudiante INT NOT NULL, 
 id_curso INT NOT NULL,
 fecha_inscripcion DATE,
+id_estudiantes int not null,
 primary key(id_inscripcion),
 foreign key (id_curso) references cursos(id_curso),
 foreign key (id_estudiantes) references estudiantes(id_estudiantes)
@@ -28,9 +28,8 @@ primary key(id_curso)
 
 
 create table profesores (
-id_profesor INT,
+id_profesor INT  NOT NULL AUTO_INCREMENT,
 nombre VARCHAR(100),
 especialidad VARCHAR(100),
-primary key(id_estudiantes)
+primary key(id_profesor)
 );
-
